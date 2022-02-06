@@ -64,7 +64,7 @@ AppAsset::register($this);
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']); ?>">
                                 <h3 class="text-white"> Home Gym Equipment
                                 </h3>
                             </a>

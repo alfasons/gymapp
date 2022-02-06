@@ -13,7 +13,7 @@
                 <div class="breadcrumb-text">
                     <h2>Workshop</h2>
                     <div class="bt-option">
-                        <a href="./index.html">Home</a>
+                        <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']); ?>">Home</a>
                         <span>Workshop</span>
                     </div>
                 </div>

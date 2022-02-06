@@ -14,7 +14,7 @@ $this->title = 'Home Gym Equipment';
                         <div class="hi-text">
                             <span>Shape your body</span>
                             <h1>Be <strong>strong</strong> traning hard</h1>
-                            <a href="#" class="primary-btn">Get info</a>
+                            <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']); ?>" class="primary-btn">Get info</a>
                         </div>
                     </div>
                 </div>

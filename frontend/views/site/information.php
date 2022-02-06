@@ -7,7 +7,7 @@
                 <div class="breadcrumb-text">
                     <h2>Information</h2>
                     <div class="bt-option">
-                        <a href="./index.html">Home</a>
+                        <a href="#">Home</a>
                         <span>Information</span>
                     </div>
                 </div>
