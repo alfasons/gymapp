@@ -1,13 +1,11 @@
 <?php
-/* @var $this \yii\web\View */
+/* @var $this View */
 /* @var $content string */
 
-use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
-use yii\bootstrap4\Nav;
-use yii\bootstrap4\NavBar;
+use yii\helpers\Url;
+use yii\web\View;
 
 AppAsset::register($this);
 ?>
@@ -67,7 +65,8 @@ AppAsset::register($this);
                     <div class="col-lg-3">
                         <div class="logo">
                             <a href="./index.html">
-                                <h3 class="text-white"> Home Gym Equipment</h3>
+                                <h3 class="text-white"> Home Gym Equipment
+                                </h3>
                             </a>
                         </div>
                     </div>
@@ -77,33 +76,34 @@ AppAsset::register($this);
                                 <li class="active"><a href="<?= Yii::$app->urlManager->createUrl(['/site/index']); ?>">Home</a></li>
                                 <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/information']); ?>">Information</a></li>
                                 <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/wanted']); ?>">Wanted</a></li>
-                                <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/workshop']); ?>">Workshop</a></li>
 
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
+                                        <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/workshop']); ?>">Workshop</a></li>
+
                                         <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/gallery']); ?>">Gallery</a></li>
                                         <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/featured']); ?>">Featured</a></li>
-
+                                        <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/contact']); ?>">Contact</a></li>
 
                                     </ul>
                                 </li>
-                                <li><a href="<?= Yii::$app->urlManager->createUrl(['/site/contact']); ?>">Contact</a></li>
+
+                                <li>
+
+                                    <form action="<?php echo Url::to(['../site/search']) ?>"
+                                          class="">
+                                        <div class="form"> <i class="icon icon-search"></i>
+                                            <input class="form-control form-input text-white-50" type="search" style="background-color: black;color:white" placeholder="Search"
+                                                   name="keyword"
+                                                   value="<?php echo Yii::$app->request->get('keyword') ?>">
+
+                                        </div>
+                                    </form>
+                                </li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="top-option">
-                            <div class="to-search search-switch">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <div class="to-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="canvas-open">
                     <i class="fa fa-bars"></i>
@@ -121,18 +121,17 @@ AppAsset::register($this);
                         <div class="fs-about">
                             <div class="fa-logo">
                                 <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']); ?>">
-                                    <h3 class="text-white">Home Gym Equipment</h3>
+                                    <h3 class="text-white">Home Gym</h3></br></br>
                                 </a>
+                                </br>
+                                <div class="to-social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    &nbsp &nbsp; <a href="#"><i class="fa fa-twitter"></i></a>
+                                    &nbsp &nbsp;<a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    &nbsp &nbsp; <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore dolore magna aliqua endisse ultrices gravida lorem.</p>
-                            <div class="fa-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa  fa-envelope-o"></i></a>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6">

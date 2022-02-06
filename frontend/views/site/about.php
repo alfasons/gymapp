@@ -8,7 +8,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+<section class="breadcrumb-section set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -79,7 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 p-0">
-                <div class="about-video set-bg" data-setbg="img/about-us.jpg">
+                <div class="about-video set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/about-us.jpg">
                     <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i
                             class="fa fa-caret-right"></i></a>
                 </div>
@@ -149,7 +149,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="ts-slider owl-carousel">
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg">
+                    <div class="ts-item set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/team/team-1.jpg">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
@@ -157,7 +157,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="img/team/team-2.jpg">
+                    <div class="ts-item set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/team/team-2.jpg">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
@@ -165,7 +165,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="img/team/team-3.jpg">
+                    <div class="ts-item set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/team/team-3.jpg">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
@@ -173,7 +173,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="img/team/team-4.jpg">
+                    <div class="ts-item set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/team/team-4.jpg">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
@@ -181,7 +181,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="img/team/team-5.jpg">
+                    <div class="ts-item set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/team/team-5.jpg">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
@@ -189,7 +189,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="img/team/team-6.jpg">
+                    <div class="ts-item set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/team/team-6.jpg">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
@@ -203,7 +203,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <!-- Team Section End -->
 
 <!-- Banner Section Begin -->
-<section class="banner-section set-bg" data-setbg="img/banner-bg.jpg">
+<section class="banner-section set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/banner-bg.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -234,7 +234,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="ti_pic">
-                            <img src="img/testimonial/testimonial-1.jpg" alt="">
+                            <img src="<?= Yii::$app->request->baseUrl ?>/img/testimonial/testimonial-1.jpg" alt="">
                         </div>
                         <div class="ti_text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -256,7 +256,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="ti_pic">
-                            <img src="img/testimonial/testimonial-2.jpg" alt="">
+                            <img src="<?= Yii::$app->request->baseUrl ?>/img/testimonial/testimonial-2.jpg" alt="">
                         </div>
                         <div class="ti_text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -286,22 +286,22 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-md-4">
                 <div class="gt-text">
                     <i class="fa fa-map-marker"></i>
-                    <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                    <p>Nairobi,<br/>NBH 00100</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gt-text">
                     <i class="fa fa-mobile"></i>
                     <ul>
-                        <li>125-711-811</li>
-                        <li>125-668-886</li>
+                        <li>0729 077 801</li>
+
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gt-text email">
                     <i class="fa fa-envelope"></i>
-                    <p>Support.gymcenter@gmail.com</p>
+                    <p>austineakidiva@gmail.com</p>
                 </div>
             </div>
         </div>

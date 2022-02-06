@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb-bg.jpg">
+<section class="breadcrumb-section set-bg" data-setbg="<?= Yii::$app->request->baseUrl ?>/img/breadcrumb-bg.jpg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -43,18 +43,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="contact-widget">
                     <div class="cw-text">
                         <i class="fa fa-map-marker"></i>
-                        <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                        <p>Nairobi,<br/>NBH 00100</p>
                     </div>
                     <div class="cw-text">
                         <i class="fa fa-mobile"></i>
                         <ul>
-                            <li>125-711-811</li>
-                            <li>125-668-886</li>
+                            <li>0729 077 801</li>
                         </ul>
                     </div>
                     <div class="cw-text email">
                         <i class="fa fa-envelope"></i>
-                        <p>Support.gymcenter@gmail.com</p>
+                        <p>austineakidiva@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -65,10 +64,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= $form->field($model, 'email')->textInput(['placeholder' => 'Email'])->label(false) ?>
                     <?= $form->field($model, 'subject')->textInput(['placeholder' => 'Subject'])->label(false) ?>
                     <?= $form->field($model, 'body')->textarea(['rows' => 6, 'placeholder' => 'Body'])->label(false) ?>
-                    <?=
-                    $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ])
+                    <?php
+                    //$form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                    // 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                    //])
                     ?>
 
                     <?php ActiveForm::end(); ?>
@@ -91,22 +90,22 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-md-4">
                 <div class="gt-text">
                     <i class="fa fa-map-marker"></i>
-                    <p>333 Middle Winchendon Rd, Rindge,<br/> NH 03461</p>
+                    <p>Nairobi,<br/>NBH 00100</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gt-text">
                     <i class="fa fa-mobile"></i>
                     <ul>
-                        <li>125-711-811</li>
-                        <li>125-668-886</li>
+                        <li>0729 077 801</li>
+
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="gt-text email">
                     <i class="fa fa-envelope"></i>
-                    <p>Support.gymcenter@gmail.com</p>
+                    <p>austineakidiva@gmail.com</p>
                 </div>
             </div>
         </div>

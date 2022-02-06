@@ -2,19 +2,22 @@
 
 namespace frontend\controllers;
 
+use common\models\LoginForm;
+use frontend\models\ContactForm;
+use frontend\models\GymProducts;
+use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResendVerificationEmailForm;
+use frontend\models\ResetPasswordForm;
+use frontend\models\SignupForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+use yii\web\Response;
+use const YII_ENV_TEST;
 
 /**
  * Site controller
@@ -208,7 +211,7 @@ class SiteController extends Controller {
      *
      * @param string $token
      * @throws BadRequestHttpException
-     * @return yii\web\Response
+     * @return Response
      */
     public function actionVerifyEmail($token) {
         try {
@@ -267,6 +270,25 @@ class SiteController extends Controller {
 
     public function actionFeatured() {
         return $this->render('featured');
+    }
+
+    public function actionSearch($keyword) {
+
+        if ($keyword) {
+
+            //  ->andWhere(['like', 'title', '%' . $search . '%', false]);
+            $products = GymProducts::find()
+                    ->andWhere(['like', 'name', '%' . $keyword . '%', false])
+                    ->asArray();
+            $count = $products->count();
+            $pro = $products->all();
+        } else {
+            $count = 0;
+            $pro = null;
+        }
+
+
+        return $this->render('search', ['products' => $pro, 'count' => $count]);
     }
 
 }
